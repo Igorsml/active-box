@@ -128,6 +128,8 @@ p {
     border: 0;
     cursor: pointer;
     text-decoration: none;
+    transition: background .2s linear;
+    text-align: center;
 }
 
 .btn--red {
@@ -297,6 +299,10 @@ p {
     display: flex;
 }
 
+.social--footer {
+    justify-content: center;
+}
+
 .social__item {
     display: flex;
     align-items: center;
@@ -314,6 +320,22 @@ p {
 
 .social__item:hover .social__icon {
     fill: #000;
+}
+
+.social--footer .social__item {
+    background-color: transparent;
+    border-width: 2px;
+    border-color: #fff;
+    border-radius: 2px;
+}
+
+.social--footer .social__icon {
+    fill: #fff;
+}
+
+.social--footer
+.social__item:hover {
+    background: #fff;
 }
 
 .social__icon {
@@ -379,16 +401,48 @@ p {
 }
 
 .download__title {
-    font-style: 28px;
+    font-size: 28px;
     color: #2d3033;
     font-weight: 300;
     margin-bottom: 10px;
 }
 
-.donwload__text {
-    font-style: 13px;
+.download__text {
+    font-size: 13px;
     color:  #2d3033;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 30px;
+}
+
+/* Footer */
+
+.footer {
+    padding: 70px 0;
+    background-color: #3a3e64;
+}
+
+.footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer__block {
+    width: 33.33333%;
+    text-align: center;
+}
+
+.footer__title {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer__adress {
+    color: rgba(255,255,255,.5);
+    font-style: normal;
+    font: size 14px;
+    line-height: 1.5;
 }
