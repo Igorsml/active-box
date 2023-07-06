@@ -217,7 +217,6 @@ p {
 .works {
     display: flex;
     flex-wrap: wrap;
-    scale: 1;
 }
 
 .works__item {
@@ -235,7 +234,7 @@ p {
     opacity: 1;
 }
 
-.works__content {
+/* .works__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -249,7 +248,7 @@ p {
     left: 0;
     z-index: 2;
     transition: opacity .2s linear;
-}
+} */
 
 .works__title {
     margin-bottom: 5px;
@@ -265,8 +264,15 @@ p {
     color: #fff;
 }
 
+.works__photo {
+    width: 100%;
+    scale: 1;
+    transition: all .2s linear;
+}
 
-
+.works__photo:hover {
+    scale: 1.1;
+}
 
 /* Team
 ===================*/
@@ -286,11 +292,20 @@ p {
     margin-bottom: 30px;
 }
 
+.team__photo-wrap {
+    overflow: hidden;
+}
+
 .team__photo {
     display: block;
     max-width: 100%;
     height: auto;
     margin-bottom: 20px;
+    transition: all .2s linear;
+}
+
+.team__photo:hover {
+    filter: brightness(0.8);
 }
 
 .team__name {
@@ -412,6 +427,11 @@ p {
     z-index: 1;
 
     transform: translateY(-50%);
+    transition: all .2s linear;
+}
+
+.reviews__img:hover {
+    filter: grayscale(90%)
 }
 
 .reviews__content {

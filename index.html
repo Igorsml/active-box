@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cardo:400i|Open+Sans:700@ital@1&family=Open+Sans:wght@700&family=Raleway:wght@400;600;700&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device, initial-scale=1">
@@ -66,7 +65,9 @@
         <div class="container">
             <div class="header__inner">
                 <div class="header_logo">
-                    <img loading="lazy" src="img/activebox-logo.webp" alt="">
+                    <a href="/">
+                        <img loading="lazy" src="img/activebox-logo.webp" alt="logo">
+                    </a>
                 </div>
                 <nav class="nav" id="nav">
                     <a class="nav__link" href="#" data-scroll="#features">Features</a>
@@ -219,7 +220,9 @@
             <div class="team__inner">
 
                 <div class="team__item">
-                    <img loading="lazy" class="team__photo" src="img/p1.webp" class="img" alt="Igor">
+                    <div class="team__photo-wrap">
+                        <img loading="lazy" class="team__photo" src="img/p1.webp" class="img" alt="Igor">
+                    </div>
                     <div class="team__name">Igor Sml</div>
                     <div class="team__prof">Founder, CEO</div>
                     <div class="team__text">
@@ -247,7 +250,9 @@
                 </div>
 
                 <div class="team__item">
-                    <img loading="lazy" class="team__photo" src="img/p2.webp" class="img" alt="Nika">
+                    <div class="team__photo-wrap">
+                        <img loading="lazy" class="team__photo" src="img/p2.webp" class="img" alt="Nika">
+                    </div>
                     <div class="team__name">Nika Vel</div>
                     <div class="team__prof">UI Designer</div>
                     <div class="team__text">
@@ -275,7 +280,9 @@
                 </div>
 
                 <div class="team__item">
-                    <img loading="lazy" class="team__photo" src="img/p3.webp" class="img" alt="Miriam">
+                    <div class="team__photo-wrap">
+                        <img loading="lazy" class="team__photo" src="img/p3.webp" class="img" alt="Miriam">
+                    </div>
                     <div class="team__name">Miriam Kysindra</div>
                     <div class="team__prof">Founder, CEO</div>
                     <div class="team__text">
@@ -303,7 +310,9 @@
                 </div>
 
                 <div class="team__item">
-                    <img loading="lazy" class="team__photo" src="img/p4.webp" class="img" alt="Timmy">
+                    <div class="team__photo-wrap">
+                        <img loading="lazy" class="team__photo" src="img/p4.webp" class="img" alt="Timmy">
+                    </div>
                     <div class="team__name">Timmy Licker</div>
                     <div class="team__prof">Data Scientist</div>
                     <div class="team__text">
@@ -381,7 +390,10 @@
             <div class="download__text">
                 <p>Fusce dapibus, tellus ac cursus commodo</p>
             </div>
-            <a class="btn btn--red btn-long" href="#">Download Here</a>
+            <button class="btn btn--red btn-long" onclick="window.open('https://i.imgflip.com/qk55o.jpg?a468672')"
+                type="submit">Download
+                Here</button>
+            </form>
         </div>
     </div>
 
@@ -432,15 +444,15 @@
         <div class="copyright">
             <div class="containier">
                 <div class="copyright__text">
-                    <div>Copyright © 2015 ActiveBox. All Rights Reserved</div>
-                    <div>Made with Y <span>by Kamal Chaneman</span></div>
+                    <div>All Rights Reserved</div>
+                    <div>Made with <span>Love</span></div>
                 </div>
             </div>
 
     </footer>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="app.js"></script>
 </body>
 

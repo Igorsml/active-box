@@ -1,23 +1,22 @@
-$(function() {
-
+$(function () {
   // Fixed Header
   let header = $("#header");
   let intro = $("#intro");
-  let introH= intro.innerHeight();
+  let introH = intro.innerHeight();
   let scrollPos = $(window).scrollTop();
   let nav = $("#nav");
   let navToggle = $("#navToggle");
 
-  chekScroll(scrollPos, introH);
+  checkScroll(scrollPos, introH);
 
-  $(window).on("scroll resize", function() {
+  $(window).on("scroll resize", function () {
     let introH = intro.innerHeight();
     scrollPos = $(this).scrollTop();
-    chekScroll(scrollPos, introH);
+    checkScroll(scrollPos, introH);
   });
 
-  function chekScroll(scrollPos, introH) {
-    if( scrollPos > introH) {
+  function checkScroll(scrollPos, introH) {
+    if (scrollPos > introH) {
       header.addClass("fixed");
     } else {
       header.removeClass("fixed");
@@ -32,29 +31,28 @@ $(function() {
 
     nav.removeClass("show");
 
-    console.log(elementOffset);
+    $("html, body").animate(
+      {
+        scrollTop: elementOffset - 60,
+      },
+      700
+    );
+  });
 
-    $("html, body").animate ({
-      scrollTop: elementOffset - 60
-    }, 700)
-    });
+  // Nav Toggle
+  navToggle.on("click", function (event) {
+    event.preventDefault();
+    nav.toggleClass("show");
+  });
 
-    // Nav Toggle
-  navToggle.on("click", function(event) {
-  event.preventDefault();
-  nav.toggleClass("show");
-});
-
-
-// Reviews 
-let slider = $("#reviewsSlider");
-slider.slick({
-  infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  fade: true,
-  arrows: false,
-  dots: true
-});
-
+  // Reviews
+  let slider = $("#reviewsSlider");
+  slider.slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    arrows: false,
+    dots: true,
+  });
 });
